@@ -1,0 +1,3593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navFixed">
+        <a class="navbar-brand col-2" href="#">
+          <img class="webLogo" src="./img/icons/web-logo.png" />
+        </a>
+        <div class="midMenu col-5 pl-0 px-0 text-center">
+          <a href="#filmblock" class="menu menuTitle">Lịch Chiếu</a>
+          <a href="#cinemablock" class="menu menuTitle">Cụm rạp</a>
+          <a href="#newsblock" class="menu menuTitle">Tin Tức</a>
+          <a href="#appblock" class="menu menuTitle">Ứng dụng</a>
+        </div>
+        <div class="rightMenu col-5 col-md-4 col-lg-3 pl-0 pr-0 d-flex">
+          <div id="account" class="imgCircle col-6">
+            <a href="#" class="menu loginTitle">
+              <img class="btnLogin" src="./img/avatar.png" />
+              <span>Đăng Nhập </span>
+            </a>
+          </div>
+          <div class="nav-item col-6 locationMenu dropdown">
+            <img
+              class="place-header white"
+              src="./img/icons/location-header.png"
+            />
+            <div
+              class="dropdown-toggle selectMenu"
+              href="#"
+              id="locationMenu"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Hồ Chí Minh
+            </div>
+            <div class="dropdown-menu customBar" aria-labelledby="locationMenu">
+              <a class="dropdown-item" href="#">Vũng Tàu</a>
+              <a class="dropdown-item" href="#">Tây Ninh</a>
+              <a class="dropdown-item" href="#">Tiền Giang</a>
+              <a class="dropdown-item" href="#">Bến tre</a>
+              <a class="dropdown-item" href="#">Long an</a>
+              <a class="dropdown-item" href="#">Cà mau</a>
+            </div>
+          </div>
+        </div>
+        <button class="sideBar-toggler" type="button">
+          <img src="./img/icons/menu-options.png" alt="" />
+        </button>
+        <!-- sidebar -->
+        <div id="mySidebar" class="sidebar">
+          <div class="wrapperMenu">
+            <div class="wrapFirst">
+              <a href="#">
+                <img class="btnLogin" src="./img/avatar.png" />
+                Đăng Nhập
+              </a>
+              <img class="xSidebar" src="./img/icons/next-session.png" alt="" />
+            </div>
+            <a class="menuSideBar" href="#">Lịch Chiếu</a>
+            <a class="menuSideBar" href="#">Cụm Rạp</a>
+            <a class="menuSideBar" href="#">Tin Tức</a>
+            <a class="menuSideBar" href="#">Ứng dụng</a>
+            <a class="menuSideBar" href="#">Hồ Chí Mình</a>
+          </div>
+        </div>
+        <!--  -->
+      </nav>
+    </header>
+    <section class="carousel">
+      <div class="wraperTrailer">
+        <div class="carouselItem bg-one">
+          <a class="playTrailer">
+            <img src="./img/icons/play-video.png" alt="" />
+          </a>
+        </div>
+        <div class="carouselItem bg-two">
+          <a href="#" class="playTrailer">
+            <img src="./img/icons/play-video.png" alt="" />
+          </a>
+        </div>
+        <div class="carouselItem bg-three">
+          <a href="#" class="playTrailer">
+            <img src="./img/icons/play-video.png" alt="" />
+          </a>
+        </div>
+        <div class="carouselItem bg-four">
+          <a href="#" class="playTrailer">
+            <img src="./img/icons/play-video.png" alt="" />
+          </a>
+        </div>
+        <div class="carouselItem bg-five">
+          <a href="#" class="playTrailer">
+            <img src="./img/icons/play-video.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div id="homeTools" class="navBuyTicket hideOnMobile">
+        <div class="dropdown selectFilm" id="selectMoive">
+          <div class="dropdown-toggle selectMenu" data-toggle="dropdown">
+            Phim
+          </div>
+          <div class="dropdown-menu customBar">
+            <a class="dropdown-item" href="#"
+              >Ác Quỷ Đối Đầu - Deliver Us From Evil - (C18)</a
+            >
+            <a class="dropdown-item" href="#">Tenet - (C16)</a>
+            <a class="dropdown-item" href="#"
+              >Vì Sao Đưa Bạn Tới - Jungle Beat - (P)</a
+            >
+            <a class="dropdown-item" href="#"
+              >Thảm Hoạ Thiên Thạch - Greenland - (C16)</a
+            >
+            <a class="dropdown-item" href="#"
+              >Nàng Tiên Cá Ở Paris - A Mermaid in Paris</a
+            >
+            <a class="dropdown-item" href="#">Ác Nữ - Bloodlust Lady - (C18)</a>
+          </div>
+        </div>
+        <div class="smallBlock dropdown selectCinema">
+          <div class="dropdown-toggle selectMenu" data-toggle="dropdown">
+            Rạp
+          </div>
+          <div class="dropdown-menu customBar">
+            <a class="dropdown-item" href="#">Vui lòng chọn phim</a>
+          </div>
+        </div>
+        <div class="smallBlock dropdown selectDate">
+          <div class="dropdown-toggle selectMenu" data-toggle="dropdown">
+            Ngày xem
+          </div>
+          <div class="dropdown-menu customBar">
+            <a class="dropdown-item" href="#">Vui lòng chọn phim và rạp</a>
+          </div>
+        </div>
+        <div class="smallBlock dropdown selectSession">
+          <div class="dropdown-toggle selectMenu" data-toggle="dropdown">
+            Suất chiếu
+          </div>
+          <div class="dropdown-menu customBar">
+            <a class="dropdown-item" href="#"
+              >Vui lòng chọn phim, rạp và ngày xem</a
+            >
+          </div>
+        </div>
+        <div class="smallBlock text-center">
+          <button type="button" class="darkBuyButon" id="btnBuy">
+            MUA VÉ NGAY
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="filmblockSub">
+      <div class="maxWidth container">
+        <ul class="nav nav-tabs filmNav" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link filmLink active"
+              id="showingFilmSub-tab"
+              data-toggle="tab"
+              href="#showingFilmSub"
+              role="tab"
+              aria-controls="showingFilmSub"
+              aria-selected="true"
+            >
+              Đang chiếu
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link filmLink"
+              id="upComingFilmSub-tab"
+              data-toggle="tab"
+              href="#upComingFilmSub"
+              role="tab"
+              aria-controls="upComingFilmSub"
+              aria-selected="false"
+            >
+              Sắp chiếu
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content" id="filmContentSub">
+          <div
+            class="tab-pane fade row show active"
+            id="showingFilmSub"
+            role="tabpanel"
+            aria-labelledby="showingFilmSub-tab"
+          >
+            <div class="filmItem">
+              <a href="#">
+                <div class="filmThumbnail set-5">
+                  <div class="showingDetail showHover">
+                    <a class="playTrailer">
+                      <img src="./img/icons/play-video.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="avgPoint">
+                    <div class="textPoint">8.9</div>
+                    <div class="setStar">
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="filmInfo">
+                <div class="showHover">
+                  <button class="redBuyButton">Mua vé</button>
+                </div>
+                <div class="nameFilm hideHover">
+                  <span class="ageRed">C18</span>
+                  Hầm Quỷ - Behind You - (C18)
+                </div>
+                <div class="timeFilm hideHover">86 phút</div>
+              </div>
+            </div>
+            <div class="filmItem">
+              <a href="#">
+                <div class="filmThumbnail set-6">
+                  <div class="showingDetail showHover">
+                    <a class="playTrailer">
+                      <img src="./img/icons/play-video.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="avgPoint">
+                    <div class="textPoint">8.9</div>
+                    <div class="setStar">
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="filmInfo">
+                <div class="showHover">
+                  <button class="redBuyButton">Mua vé</button>
+                </div>
+                <div class="nameFilm hideHover">
+                  <span class="ageRed">C18</span>
+                  Hầm Quỷ - Behind You - (C18)
+                </div>
+                <div class="timeFilm hideHover">86 phút</div>
+              </div>
+            </div>
+            <div class="filmItem">
+              <a href="#">
+                <div class="filmThumbnail set-7">
+                  <div class="showingDetail showHover">
+                    <a class="playTrailer">
+                      <img src="./img/icons/play-video.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="avgPoint">
+                    <div class="textPoint">8.9</div>
+                    <div class="setStar">
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="filmInfo">
+                <div class="showHover">
+                  <button class="redBuyButton">Mua vé</button>
+                </div>
+                <div class="nameFilm hideHover">
+                  <span class="ageRed">C18</span>
+                  Hầm Quỷ - Behind You - (C18)
+                </div>
+                <div class="timeFilm hideHover">86 phút</div>
+              </div>
+            </div>
+            <div class="collapse film-collapse" id="tabFilm1-collapse">
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-8">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-9">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapButtonSeeMoreNews text-center">
+              <button
+                class="btnViewMore"
+                type="button"
+                data-toggle="collapse"
+                data-target="#tabFilm1-collapse"
+                aria-expanded="false"
+                aria-controls="tabFilm1-collapse"
+              >
+                XEM THÊM
+              </button>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade row"
+            id="upComingFilmSub"
+            role="tabpanel"
+            aria-labelledby="upComingFilmSub-tab"
+          >
+            <div class="filmItem">
+              <a href="#">
+                <div class="filmThumbnail set-1">
+                  <div class="showingDetail showHover">
+                    <a class="playTrailer">
+                      <img src="./img/icons/play-video.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="avgPoint">
+                    <div class="textPoint">8.9</div>
+                    <div class="setStar">
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="filmInfo">
+                <div class="showHover">
+                  <button class="redBuyButton">Mua vé</button>
+                </div>
+                <div class="nameFilm hideHover">
+                  <span class="ageRed">C18</span>
+                  Hầm Quỷ - Behind You - (C18)
+                </div>
+                <div class="timeFilm hideHover">86 phút</div>
+              </div>
+            </div>
+            <div class="filmItem">
+              <a href="#">
+                <div class="filmThumbnail set-2">
+                  <div class="showingDetail showHover">
+                    <a class="playTrailer">
+                      <img src="./img/icons/play-video.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="avgPoint">
+                    <div class="textPoint">8.9</div>
+                    <div class="setStar">
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="filmInfo">
+                <div class="showHover">
+                  <button class="redBuyButton">Mua vé</button>
+                </div>
+                <div class="nameFilm hideHover">
+                  <span class="ageRed">C18</span>
+                  Hầm Quỷ - Behind You - (C18)
+                </div>
+                <div class="timeFilm hideHover">86 phút</div>
+              </div>
+            </div>
+            <div class="filmItem">
+              <a href="#">
+                <div class="filmThumbnail set-3">
+                  <div class="showingDetail showHover">
+                    <a class="playTrailer">
+                      <img src="./img/icons/play-video.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="avgPoint">
+                    <div class="textPoint">8.9</div>
+                    <div class="setStar">
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="filmInfo">
+                <div class="showHover">
+                  <button class="redBuyButton">Mua vé</button>
+                </div>
+                <div class="nameFilm hideHover">
+                  <span class="ageRed">C18</span>
+                  Hầm Quỷ - Behind You - (C18)
+                </div>
+                <div class="timeFilm hideHover">86 phút</div>
+              </div>
+            </div>
+            <div class="filmItem">
+              <a href="#">
+                <div class="filmThumbnail set-4">
+                  <div class="showingDetail showHover">
+                    <a class="playTrailer">
+                      <img src="./img/icons/play-video.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="avgPoint">
+                    <div class="textPoint">8.9</div>
+                    <div class="setStar">
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.png" alt="" />
+                      <img src="./img/icons/star1.2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="filmInfo">
+                <div class="showHover">
+                  <button class="redBuyButton">Mua vé</button>
+                </div>
+                <div class="nameFilm hideHover">
+                  <span class="ageRed">C18</span>
+                  Hầm Quỷ - Behind You - (C18)
+                </div>
+                <div class="timeFilm hideHover">86 phút</div>
+              </div>
+            </div>
+            <div class="collapse film-collapse" id="tabFilm2-collapse">
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-1">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-2">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapButtonSeeMoreNews text-center">
+              <button
+                class="btnViewMore"
+                type="button"
+                data-toggle="collapse"
+                data-target="#tabFilm2-collapse"
+                aria-expanded="false"
+                aria-controls="tabFilm2-collapse"
+              >
+                XEM THÊM
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="filmblock">
+      <div class="maxWidth container">
+        <ul class="nav nav-tabs filmNav" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link filmLink active"
+              id="showingFilm-tab"
+              data-toggle="tab"
+              href="#showingFilm"
+              role="tab"
+              aria-controls="showingFilm"
+              aria-selected="true"
+              >Đang chiếu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link filmLink"
+              id="upComingFilm-tab"
+              data-toggle="tab"
+              href="#upComingFilm"
+              role="tab"
+              aria-controls="upComingFilm"
+              aria-selected="false"
+              >Sắp chiếu</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content" id="filmContent">
+          <div
+            class="tab-pane fade row show active"
+            id="showingFilm"
+            role="tabpanel"
+            aria-labelledby="showingFilm-tab"
+          >
+            <div class="col-12 tabFilmSlider1">
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-1">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-2">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-3">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-4">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-1">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-2">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-3">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-4">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-1">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-2">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-3">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-4">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-1">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-2">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-3">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-4">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-4">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade row"
+            id="upComingFilm"
+            role="tabpanel"
+            aria-labelledby="upComingFilm-tab"
+          >
+            <div class="col-12 tabFilmSlider2">
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-1">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-2">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-3">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-4">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-1">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-2">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-3">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-4">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-1">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-2">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-3">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-4">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-1">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-2">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-3">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-4">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+
+              <div class="filmItem">
+                <a href="#">
+                  <div class="filmThumbnail set-4">
+                    <div class="showingDetail showHover">
+                      <a class="playTrailer">
+                        <img src="./img/icons/play-video.png" alt="" />
+                      </a>
+                    </div>
+                    <div class="avgPoint">
+                      <div class="textPoint">8.9</div>
+                      <div class="setStar">
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.png" alt="" />
+                        <img src="./img/icons/star1.2.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="filmInfo">
+                  <div class="showHover">
+                    <button class="redBuyButton">Mua vé</button>
+                  </div>
+                  <div class="nameFilm hideHover">
+                    <span class="ageRed">C18</span>
+                    Hầm Quỷ - Behind You - (C18)
+                  </div>
+                  <div class="timeFilm hideHover">86 phút</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cinemablock">
+      <div class="container maxWidth">
+        <div class="cinemaPanel">
+          <nav class="brandCinema pr-0">
+            <div class="nav" id="brandCinema" role="tablist">
+              <a
+                class="nav-item nav-link brandItem active"
+                id="bhdCine-tab"
+                data-toggle="tab"
+                href="#bhdCine"
+                role="tab"
+                aria-controls="bhdCine"
+                aria-selected="true"
+              >
+                <img src="./img/icons/bhd.png" alt="" />
+              </a>
+              <a
+                class="nav-item nav-link brandItem"
+                id="galaxyCine-tab"
+                data-toggle="tab"
+                href="#galaxyCine"
+                role="tab"
+                aria-controls="galaxyCine"
+                aria-selected="false"
+              >
+                <img src="./img/icons/galaxycine.png" alt="" />
+              </a>
+              <a
+                class="nav-item nav-link brandItem"
+                id="starCine-tab"
+                data-toggle="tab"
+                href="#starCine"
+                role="tab"
+                aria-controls="starCine"
+                aria-selected="false"
+              >
+                <img src="./img/icons/cinestar.png" alt="" />
+              </a>
+              <a
+                class="nav-item nav-link brandItem"
+                id="ddcCine-tab"
+                data-toggle="tab"
+                href="#ddcCine"
+                role="tab"
+                aria-controls="ddcCine"
+                aria-selected="false"
+              >
+                <img src="./img/icons/ddc.png" alt="" />
+              </a>
+              <a
+                class="nav-item nav-link brandItem"
+                id="megagsCine-tab"
+                data-toggle="tab"
+                href="#megagsCine"
+                role="tab"
+                aria-controls="megagsCine"
+                aria-selected="false"
+              >
+                <img src="./img/icons/megags.png" alt="" />
+              </a>
+              <a
+                class="nav-item nav-link brandItem"
+                id="dCine-tab"
+                data-toggle="tab"
+                href="#dCine"
+                role="tab"
+                aria-controls="dCine"
+                aria-selected="false"
+              >
+                <img src="./img/icons/dcine.png" alt="" />
+              </a>
+              <a
+                class="nav-item nav-link brandItem"
+                id="lotteCine-tab"
+                data-toggle="tab"
+                href="#lotteCine"
+                role="tab"
+                aria-controls="lotteCine"
+                aria-selected="false"
+              >
+                <img src="./img/icons/lotte.png" alt="" />
+              </a>
+            </div>
+          </nav>
+          <div class="tab-content contentCinema">
+            <div
+              class="tab-pane fade show active"
+              id="bhdCine"
+              role="tabpanel"
+              aria-labelledby="bhdCine-tab"
+            >
+              <div class="row m-auto">
+                <nav class="col-md-5 locationList">
+                  <div class="nav flex-column" role="tablist">
+                    <div
+                      class="cineAddItem active"
+                      id="bhdLocation-tab1"
+                      data-toggle="tab"
+                      href="#bhdLocation1"
+                      role="tab"
+                      aria-controls="bhdLocation1"
+                      aria-selected="true"
+                    >
+                      <img src="./img/icons/bhdL1.jpg" alt="" />
+                      <div class="wrapInfo">
+                        <p class="cinemaName">
+                          <span class="colorBHD">BHD Star</span> - Bitexco
+                        </p>
+                        <p class="addressCine">
+                          L3-Bitexco Icon 68, 2 Hải Triều, Q.1
+                        </p>
+                        <a class="redDetail">[chi tiết]</a>
+                      </div>
+                    </div>
+                    <div
+                      class="cineAddItem"
+                      id="bhdLocation-tab2"
+                      data-toggle="tab"
+                      href="#bhdLocation2"
+                      role="tab"
+                      aria-controls="bhdLocation2"
+                      aria-selected="false"
+                    >
+                      <img src="./img/icons/bhdL2.jpg" alt="" />
+                      <div class="wrapInfo">
+                        <p class="cinemaName">
+                          <span class="colorBHD">BHD Star</span> - Vincom Thảo
+                          Điền
+                        </p>
+                        <p class="addressCine">
+                          L5-Megamall, 159 XL Hà Nội, Q.2
+                        </p>
+                        <a class="redDetail">[chi tiết]</a>
+                      </div>
+                    </div>
+                    <div
+                      class="cineAddItem"
+                      id="bhdLocation-tab3"
+                      data-toggle="tab"
+                      href="#bhdLocation3"
+                      role="tab"
+                      aria-controls="bhdLocation3"
+                      aria-selected="false"
+                    >
+                      <img src="./img/icons/bhdL3.jpg" alt="" />
+                      <div class="wrapInfo">
+                        <p class="cinemaName">
+                          <span class="colorBHD">BHD Star</span> - Vincom 3/2
+                        </p>
+                        <p class="addressCine">
+                          L5-Vincom 3/2, 3C Đường 3/2, Q.10
+                        </p>
+                        <a class="redDetail">[chi tiết]</a>
+                      </div>
+                    </div>
+                    <div
+                      class="cineAddItem"
+                      id="bhdLocation-tab4"
+                      data-toggle="tab"
+                      href="#bhdLocation4"
+                      role="tab"
+                      aria-controls="bhdLocation4"
+                      aria-selected="false"
+                    >
+                      <img src="./img/icons/bhdL4.jpg" alt="" />
+                      <div class="wrapInfo">
+                        <p class="cinemaName">
+                          <span class="colorBHD">BHD Star</span> - Phạm Hùng
+                        </p>
+                        <p class="addressCine">
+                          L4-Satra Phạm Hùng, C6/27 Phạm Hùng, Bình Chánh
+                        </p>
+                        <a class="redDetail">[chi tiết]</a>
+                      </div>
+                    </div>
+                    <div
+                      class="cineAddItem"
+                      id="bhdLocation-tab5"
+                      data-toggle="tab"
+                      href="#bhdLocation5"
+                      role="tab"
+                      aria-controls="bhdLocation5"
+                      aria-selected="false"
+                    >
+                      <img src="./img/icons/bhdL5.jpg" alt="" />
+                      <div class="wrapInfo">
+                        <p class="cinemaName">
+                          <span class="colorBHD">BHD Star</span> - Vincom Quang
+                          Trung
+                        </p>
+                        <p class="addressCine">
+                          B1-Vincom QT, 190 Quang Trung, Gò Vấp
+                        </p>
+                        <a class="redDetail">[chi tiết]</a>
+                      </div>
+                    </div>
+                    <div
+                      class="cineAddItem"
+                      id="bhdLocation-tab6"
+                      data-toggle="tab"
+                      href="#bhdLocation6"
+                      role="tab"
+                      aria-controls="bhdLocation6"
+                      aria-selected="false"
+                    >
+                      <img src="./img/icons/bhdL6.jpg" alt="" />
+                      <div class="wrapInfo">
+                        <p class="cinemaName">
+                          <span class="colorBHD">BHD Star</span> - Vincom Lê Văn
+                          Việt
+                        </p>
+                        <p class="addressCine">
+                          L4-Vincom Plaza, 50 Lê Văn Việt, Q.9
+                        </p>
+                        <a class="redDetail">[chi tiết]</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+                <div class="tab-content col-md-7 movieList">
+                  <div
+                    class="tab-pane fade show active"
+                    id="bhdLocation1"
+                    role="tabpanel"
+                    aria-labelledby="bhdLocation-tab1"
+                  >
+                    <div class="mb-0 w-100 position-relative scheduleDetail">
+                      <div
+                        class="movieInfo"
+                        data-toggle="collapse"
+                        href="#cineSchedule-1"
+                      >
+                        <img src="./img/icons/movieInfo1.png" alt="" />
+                        <div class="movieTitle">
+                          <p>
+                            <span class="ageRed">C16</span>Dị Nhân Thế Hệ Mới -
+                            The New Mutants -
+                          </p>
+                          <p>100 phút - TIX 6.4 - IMDb 7</p>
+                        </div>
+                      </div>
+                      <div
+                        class="movieSessions collapse show"
+                        id="cineSchedule-1"
+                      >
+                        <p>2D Digital</p>
+                        <a class="movie-Startime" href="#">
+                          <span>23:15 </span>
+                          ~ 00:55
+                        </a>
+                      </div>
+                    </div>
+                    <!--  -->
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="bhdLocation2"
+                    role="tabpanel"
+                    aria-labelledby="bhdLocation-tab2"
+                  >
+                    bhdLocation2 list
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="bhdLocation3"
+                    role="tabpanel"
+                    aria-labelledby="bhdLocation-tab3"
+                  >
+                    bhdLocation3 list
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="bhdLocation4"
+                    role="tabpanel"
+                    aria-labelledby="bhdLocation-tab4"
+                  >
+                    bhdLocation4 list
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="bhdLocation5"
+                    role="tabpanel"
+                    aria-labelledby="bhdLocation-tab5"
+                  >
+                    bhdLocation5 list
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="bhdLocation6"
+                    role="tabpanel"
+                    aria-labelledby="bhdLocation-tab6"
+                  >
+                    bhdLocation6 list
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="galaxyCine"
+              role="tabpanel"
+              aria-labelledby="galaxyCine-tab"
+            >
+              <nav class="col-md-5 locationList">
+                <div class="nav flex-column" role="tablist">
+                  <div
+                    class="cineAddItem active"
+                    id="galaxyLocation-tab1"
+                    data-toggle="tab"
+                    href="#galaxyLocation1"
+                    role="tab"
+                    aria-controls="galaxyLocation1"
+                    aria-selected="true"
+                  >
+                    <img src="./img/icons/bhdL1.jpg" alt="" />
+                    <div class="wrapInfo">
+                      <p class="cinemaName">
+                        <span class="colorBHD">Galaxy Star</span> - Bitexco
+                      </p>
+                      <p class="addressCine">
+                        L3-Bitexco Icon 68, 2 Hải Triều, Q.1
+                      </p>
+                      <a class="redDetail">[chi tiết]</a>
+                    </div>
+                  </div>
+                  <div
+                    class="cineAddItem"
+                    id="galaxyLocation-tab2"
+                    data-toggle="tab"
+                    href="#galaxyLocation2"
+                    role="tab"
+                    aria-controls="galaxyLocation2"
+                    aria-selected="false"
+                  >
+                    <img src="./img/icons/bhdL2.jpg" alt="" />
+                    <div class="wrapInfo">
+                      <p class="cinemaName">
+                        <span class="colorBHD">BHD Star</span> - Vincom Thảo
+                        Điền
+                      </p>
+                      <p class="addressCine">L5-Megamall, 159 XL Hà Nội, Q.2</p>
+                      <a class="redDetail">[chi tiết]</a>
+                    </div>
+                  </div>
+                  <div
+                    class="cineAddItem"
+                    id="galaxyLocation-tab3"
+                    data-toggle="tab"
+                    href="#galaxyLocation3"
+                    role="tab"
+                    aria-controls="galaxyLocation3"
+                    aria-selected="false"
+                  >
+                    <img src="./img/icons/bhdL3.jpg" alt="" />
+                    <div class="wrapInfo">
+                      <p class="cinemaName">
+                        <span class="colorBHD">BHD Star</span> - Vincom 3/2
+                      </p>
+                      <p class="addressCine">
+                        L5-Vincom 3/2, 3C Đường 3/2, Q.10
+                      </p>
+                      <a class="redDetail">[chi tiết]</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="starCine"
+              role="tabpanel"
+              aria-labelledby="starCine-tab"
+            >
+              Không có dữ liệu
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsblock" class="newsblock">
+      <div class="container maxWidth">
+        <div
+          class="row mr-auto ml-auto col-12 pl-0 pr-0 justify-content-center"
+        >
+          <ul
+            class="nav nav-tabs border-0 newsNav justify-content-center text-center"
+            role="tablist"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link newsLink active"
+                id="news-tab"
+                data-toggle="tab"
+                href="#showingNews"
+                role="tab"
+                aria-controls="news"
+                aria-selected="true"
+                >Điện Ảnh 24h</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link newsLink"
+                id="review-tab"
+                data-toggle="tab"
+                href="#showingReview"
+                role="tab"
+                aria-controls="review"
+                aria-selected="false"
+                >Review</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link newsLink"
+                id="promotion-tab"
+                data-toggle="tab"
+                href="#showingPromotion"
+                role="tab"
+                aria-controls="promotion"
+                aria-selected="false"
+                >Khuyến Mãi</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" id="newsContent">
+            <div
+              class="tab-pane fade show active"
+              id="showingNews"
+              role="tabpanel"
+              aria-labelledby="news-tab"
+            >
+              <div class="newsItems col-12 col-sm-12 col-md-6">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/notfound.jpeg" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    [ANTEBELLUM] - 4 lý do không thể bỏ lỡ siêu phẩm kinh dị
+                    Antebellum: Bẫy Thực Tại Kinh Hoàng
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Không đi theo lối mòn máu me, hù dọa mà đầu tư khai thác những
+                  mảng tối của xã hội trên nền một câu chuyện kinh dị, có sự
+                  tham gia của nhà sản xuất đã làm nên thành công của loạt tác
+                  phẩm ấn tượng “Get Out”, “Us” hay “BlacKkKlansman”, và còn
+                  nhiều lý do khác khiến người yêu phim không thể bỏ lỡ Ante
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon like">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon comment">
+                    <a
+                      href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-6">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/notfound.jpeg" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    Ác Quỷ Đối Đầu soán ngôi Peninsula, trở thành phim đứng đầu
+                    doanh thu tại Hàn Quốc mùa dịch
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Vượt mặt Peninsula, Ác Quỷ Đối Đầu trở thành phim ăn khách
+                  nhất mùa hè 2020 tại Hàn Quốc. Chỉ sau 12 ngày, Ác Quỷ Đối Đầu
+                  chạm điểm hoà vốn với 3.5 triệu lượt xem. Ác Quỷ Đối Đầu giữ
+                  vững vị trí top 1 doanh thu 2 tuần liên tiếp tại quê nhà Hàn
+                  Quốc
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon">
+                    <a
+                      href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-4">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/tab-1-big1.png" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt
+                    Christopher Nolan
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Làng phim đương đại những năm qua chứng kiến sự lên ngôi của
+                  cái tên Christopher Nolan, được biết tới như một trong những
+                  đạo diễn thiên tài với khả năng tạo ra siêu phẩm bạc tỉ chất
+                  lượng.
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon">
+                    <a
+                      href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-4">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/tab-1-big2.png" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    Truy Cùng Giết Tận - Cuộc tái ngộ của hai 'ông hoàng phòng
+                    vé' xứ Hàn
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Sau 7 năm kể từ New World – bộ phim đạt thành tích hơn 4.68
+                  triệu vé, hai tên tuổi lão làng trong làng điện ảnh Hàn Quốc
+                  mới tiếp tục tái hợp trong Truy Cùng Giết Tận – một bộ phim
+                  hành động siêu “nặng đô”.
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon like">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon comment">
+                    <a
+                      href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-4">
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-1-sub1.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      6 đạo diễn tỉ đô làm nên thành công của những bom tấn đình
+                      đám nhất Hollywood
+                    </p>
+                  </a>
+                </div>
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-1-sub2.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Gái Già Lắm Chiêu V – Những cuộc đời vương giả
+                    </p>
+                  </a>
+                </div>
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-1-sub3.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm
+                      Chiêu
+                    </p>
+                  </a>
+                </div>
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-1-sub4.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      5 lý do khiến bạn không thể bỏ qua bộ phim Cậu Bé Người Gỗ
+                      Pinocchio
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="collapse news-collapse row" id="tab1-collapse">
+                <div class="newsItems col-12 col-sm-12 col-md-6">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/notfound.jpeg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      [ANTEBELLUM] - 4 lý do không thể bỏ lỡ siêu phẩm kinh dị
+                      Antebellum: Bẫy Thực Tại Kinh Hoàng
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Không đi theo lối mòn máu me, hù dọa mà đầu tư khai thác
+                    những mảng tối của xã hội trên nền một câu chuyện kinh dị,
+                    có sự tham gia của nhà sản xuất đã làm nên thành công của
+                    loạt tác phẩm ấn tượng “Get Out”, “Us” hay “BlacKkKlansman”,
+                    và còn nhiều lý do khác khiến người yêu phim không thể bỏ lỡ
+                    Ante
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon like">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon comment">
+                      <a
+                        href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-6">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/notfound.jpeg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Ác Quỷ Đối Đầu soán ngôi Peninsula, trở thành phim đứng
+                      đầu doanh thu tại Hàn Quốc mùa dịch
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Vượt mặt Peninsula, Ác Quỷ Đối Đầu trở thành phim ăn khách
+                    nhất mùa hè 2020 tại Hàn Quốc. Chỉ sau 12 ngày, Ác Quỷ Đối
+                    Đầu chạm điểm hoà vốn với 3.5 triệu lượt xem. Ác Quỷ Đối Đầu
+                    giữ vững vị trí top 1 doanh thu 2 tuần liên tiếp tại quê nhà
+                    Hàn Quốc
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon">
+                      <a
+                        href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-4">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-1-big1.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt
+                      Christopher Nolan
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Làng phim đương đại những năm qua chứng kiến sự lên ngôi của
+                    cái tên Christopher Nolan, được biết tới như một trong những
+                    đạo diễn thiên tài với khả năng tạo ra siêu phẩm bạc tỉ chất
+                    lượng.
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon">
+                      <a
+                        href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-4">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-1-big2.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Truy Cùng Giết Tận - Cuộc tái ngộ của hai 'ông hoàng phòng
+                      vé' xứ Hàn
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Sau 7 năm kể từ New World – bộ phim đạt thành tích hơn 4.68
+                    triệu vé, hai tên tuổi lão làng trong làng điện ảnh Hàn Quốc
+                    mới tiếp tục tái hợp trong Truy Cùng Giết Tận – một bộ phim
+                    hành động siêu “nặng đô”.
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon like">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon comment">
+                      <a
+                        href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-4">
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub1.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        6 đạo diễn tỉ đô làm nên thành công của những bom tấn
+                        đình đám nhất Hollywood
+                      </p>
+                    </a>
+                  </div>
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub2.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        Gái Già Lắm Chiêu V – Những cuộc đời vương giả
+                      </p>
+                    </a>
+                  </div>
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub3.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già
+                        Lắm Chiêu
+                      </p>
+                    </a>
+                  </div>
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub4.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        5 lý do khiến bạn không thể bỏ qua bộ phim Cậu Bé Người
+                        Gỗ Pinocchio
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wrapButtonSeeMoreNews text-center">
+                <button
+                  class="btnViewMore"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#tab1-collapse"
+                  aria-expanded="false"
+                  aria-controls="tab1-collapse"
+                >
+                  XEM THÊM
+                </button>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="showingReview"
+              role="tabpanel"
+              aria-labelledby="review-tab"
+            >
+              <div class="newsItems col-12 col-sm-12 col-md-6">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/tab-2-big1.png" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    [ANTEBELLUM] - 4 lý do không thể bỏ lỡ siêu phẩm kinh dị
+                    Antebellum: Bẫy Thực Tại Kinh Hoàng
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Không đi theo lối mòn máu me, hù dọa mà đầu tư khai thác những
+                  mảng tối của xã hội trên nền một câu chuyện kinh dị, có sự
+                  tham gia của nhà sản xuất đã làm nên thành công của loạt tác
+                  phẩm ấn tượng “Get Out”, “Us” hay “BlacKkKlansman”, và còn
+                  nhiều lý do khác khiến người yêu phim không thể bỏ lỡ Ante
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon like">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon comment">
+                    <a
+                      href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-6">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/tab-2-big2.png" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    Ác Quỷ Đối Đầu soán ngôi Peninsula, trở thành phim đứng đầu
+                    doanh thu tại Hàn Quốc mùa dịch
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Vượt mặt Peninsula, Ác Quỷ Đối Đầu trở thành phim ăn khách
+                  nhất mùa hè 2020 tại Hàn Quốc. Chỉ sau 12 ngày, Ác Quỷ Đối Đầu
+                  chạm điểm hoà vốn với 3.5 triệu lượt xem. Ác Quỷ Đối Đầu giữ
+                  vững vị trí top 1 doanh thu 2 tuần liên tiếp tại quê nhà Hàn
+                  Quốc
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon">
+                    <a
+                      href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-4">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/tab-2-big3.png" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt
+                    Christopher Nolan
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Làng phim đương đại những năm qua chứng kiến sự lên ngôi của
+                  cái tên Christopher Nolan, được biết tới như một trong những
+                  đạo diễn thiên tài với khả năng tạo ra siêu phẩm bạc tỉ chất
+                  lượng.
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon">
+                    <a
+                      href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-4">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/tab-2-big4.png" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    Truy Cùng Giết Tận - Cuộc tái ngộ của hai 'ông hoàng phòng
+                    vé' xứ Hàn
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Sau 7 năm kể từ New World – bộ phim đạt thành tích hơn 4.68
+                  triệu vé, hai tên tuổi lão làng trong làng điện ảnh Hàn Quốc
+                  mới tiếp tục tái hợp trong Truy Cùng Giết Tận – một bộ phim
+                  hành động siêu “nặng đô”.
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon like">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon comment">
+                    <a
+                      href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-4">
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-2-sub1.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      6 đạo diễn tỉ đô làm nên thành công của những bom tấn đình
+                      đám nhất Hollywood
+                    </p>
+                  </a>
+                </div>
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-2-sub2.jpg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Gái Già Lắm Chiêu V – Những cuộc đời vương giả
+                    </p>
+                  </a>
+                </div>
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-2-sub3.jpg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm
+                      Chiêu
+                    </p>
+                  </a>
+                </div>
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-2-sub4.jpg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      5 lý do khiến bạn không thể bỏ qua bộ phim Cậu Bé Người Gỗ
+                      Pinocchio
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="collapse news-collapse row" id="tab2-collapse">
+                <div class="newsItems col-12 col-sm-12 col-md-6">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/notfound.jpeg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      [ANTEBELLUM] - 4 lý do không thể bỏ lỡ siêu phẩm kinh dị
+                      Antebellum: Bẫy Thực Tại Kinh Hoàng
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Không đi theo lối mòn máu me, hù dọa mà đầu tư khai thác
+                    những mảng tối của xã hội trên nền một câu chuyện kinh dị,
+                    có sự tham gia của nhà sản xuất đã làm nên thành công của
+                    loạt tác phẩm ấn tượng “Get Out”, “Us” hay “BlacKkKlansman”,
+                    và còn nhiều lý do khác khiến người yêu phim không thể bỏ lỡ
+                    Ante
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon like">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon comment">
+                      <a
+                        href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-6">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/notfound.jpeg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Ác Quỷ Đối Đầu soán ngôi Peninsula, trở thành phim đứng
+                      đầu doanh thu tại Hàn Quốc mùa dịch
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Vượt mặt Peninsula, Ác Quỷ Đối Đầu trở thành phim ăn khách
+                    nhất mùa hè 2020 tại Hàn Quốc. Chỉ sau 12 ngày, Ác Quỷ Đối
+                    Đầu chạm điểm hoà vốn với 3.5 triệu lượt xem. Ác Quỷ Đối Đầu
+                    giữ vững vị trí top 1 doanh thu 2 tuần liên tiếp tại quê nhà
+                    Hàn Quốc
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon">
+                      <a
+                        href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-4">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-1-big1.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt
+                      Christopher Nolan
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Làng phim đương đại những năm qua chứng kiến sự lên ngôi của
+                    cái tên Christopher Nolan, được biết tới như một trong những
+                    đạo diễn thiên tài với khả năng tạo ra siêu phẩm bạc tỉ chất
+                    lượng.
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon">
+                      <a
+                        href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-4">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-1-big2.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Truy Cùng Giết Tận - Cuộc tái ngộ của hai 'ông hoàng phòng
+                      vé' xứ Hàn
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Sau 7 năm kể từ New World – bộ phim đạt thành tích hơn 4.68
+                    triệu vé, hai tên tuổi lão làng trong làng điện ảnh Hàn Quốc
+                    mới tiếp tục tái hợp trong Truy Cùng Giết Tận – một bộ phim
+                    hành động siêu “nặng đô”.
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon like">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon comment">
+                      <a
+                        href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-4">
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub1.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        6 đạo diễn tỉ đô làm nên thành công của những bom tấn
+                        đình đám nhất Hollywood
+                      </p>
+                    </a>
+                  </div>
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub2.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        Gái Già Lắm Chiêu V – Những cuộc đời vương giả
+                      </p>
+                    </a>
+                  </div>
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub3.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già
+                        Lắm Chiêu
+                      </p>
+                    </a>
+                  </div>
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub4.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        5 lý do khiến bạn không thể bỏ qua bộ phim Cậu Bé Người
+                        Gỗ Pinocchio
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="wrapButtonSeeMoreNews text-center">
+                <button
+                  class="btnViewMore"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#tab2-collapse"
+                  aria-expanded="false"
+                  aria-controls="tab2-collapse"
+                >
+                  XEM THÊM
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="showingPromotion"
+              role="tabpanel"
+              aria-labelledby="promotion-tab"
+            >
+              <div class="newsItems col-12 col-sm-12 col-md-6">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/tab-3-big1.jpg" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    [ANTEBELLUM] - 4 lý do không thể bỏ lỡ siêu phẩm kinh dị
+                    Antebellum: Bẫy Thực Tại Kinh Hoàng
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Không đi theo lối mòn máu me, hù dọa mà đầu tư khai thác những
+                  mảng tối của xã hội trên nền một câu chuyện kinh dị, có sự
+                  tham gia của nhà sản xuất đã làm nên thành công của loạt tác
+                  phẩm ấn tượng “Get Out”, “Us” hay “BlacKkKlansman”, và còn
+                  nhiều lý do khác khiến người yêu phim không thể bỏ lỡ Ante
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon like">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon comment">
+                    <a
+                      href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-6">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/tab-3-big2.png" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    Ác Quỷ Đối Đầu soán ngôi Peninsula, trở thành phim đứng đầu
+                    doanh thu tại Hàn Quốc mùa dịch
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Vượt mặt Peninsula, Ác Quỷ Đối Đầu trở thành phim ăn khách
+                  nhất mùa hè 2020 tại Hàn Quốc. Chỉ sau 12 ngày, Ác Quỷ Đối Đầu
+                  chạm điểm hoà vốn với 3.5 triệu lượt xem. Ác Quỷ Đối Đầu giữ
+                  vững vị trí top 1 doanh thu 2 tuần liên tiếp tại quê nhà Hàn
+                  Quốc
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon">
+                    <a
+                      href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-4">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/tab-3-big3.jpg" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt
+                    Christopher Nolan
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Làng phim đương đại những năm qua chứng kiến sự lên ngôi của
+                  cái tên Christopher Nolan, được biết tới như một trong những
+                  đạo diễn thiên tài với khả năng tạo ra siêu phẩm bạc tỉ chất
+                  lượng.
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon">
+                    <a
+                      href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-4">
+                <div class="newsThumbnail">
+                  <img src="./img/newsblock/tab-3-big4.jpg" alt="" />
+                </div>
+                <a href="#">
+                  <p class="newsTitle">
+                    Truy Cùng Giết Tận - Cuộc tái ngộ của hai 'ông hoàng phòng
+                    vé' xứ Hàn
+                  </p>
+                </a>
+                <p class="newsDescription">
+                  Sau 7 năm kể từ New World – bộ phim đạt thành tích hơn 4.68
+                  triệu vé, hai tên tuổi lão làng trong làng điện ảnh Hàn Quốc
+                  mới tiếp tục tái hợp trong Truy Cùng Giết Tận – một bộ phim
+                  hành động siêu “nặng đô”.
+                </p>
+                <div class="newsVoting">
+                  <div class="wrapIcon like">
+                    <img src="./img/like.png" alt="" />
+                    <span>0</span>
+                  </div>
+                  <div class="wrapIcon comment">
+                    <a
+                      href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                    >
+                      <img src="./img/comment.png" alt="" />
+                      <span>1</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="newsItems col-12 col-sm-12 col-md-4">
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-3-sub1.jpg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      6 đạo diễn tỉ đô làm nên thành công của những bom tấn đình
+                      đám nhất Hollywood
+                    </p>
+                  </a>
+                </div>
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-3-sub2.jpg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Gái Già Lắm Chiêu V – Những cuộc đời vương giả
+                    </p>
+                  </a>
+                </div>
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-3-sub3.jpg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm
+                      Chiêu
+                    </p>
+                  </a>
+                </div>
+                <div class="subItems col-xs-12">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-3-sub4.jpg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      5 lý do khiến bạn không thể bỏ qua bộ phim Cậu Bé Người Gỗ
+                      Pinocchio
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="collapse news-collapse row" id="tab3-collapse">
+                <div class="newsItems col-12 col-sm-12 col-md-6">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/notfound.jpeg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      [ANTEBELLUM] - 4 lý do không thể bỏ lỡ siêu phẩm kinh dị
+                      Antebellum: Bẫy Thực Tại Kinh Hoàng
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Không đi theo lối mòn máu me, hù dọa mà đầu tư khai thác
+                    những mảng tối của xã hội trên nền một câu chuyện kinh dị,
+                    có sự tham gia của nhà sản xuất đã làm nên thành công của
+                    loạt tác phẩm ấn tượng “Get Out”, “Us” hay “BlacKkKlansman”,
+                    và còn nhiều lý do khác khiến người yêu phim không thể bỏ lỡ
+                    Ante
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon like">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon comment">
+                      <a
+                        href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-6">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/notfound.jpeg" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Ác Quỷ Đối Đầu soán ngôi Peninsula, trở thành phim đứng
+                      đầu doanh thu tại Hàn Quốc mùa dịch
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Vượt mặt Peninsula, Ác Quỷ Đối Đầu trở thành phim ăn khách
+                    nhất mùa hè 2020 tại Hàn Quốc. Chỉ sau 12 ngày, Ác Quỷ Đối
+                    Đầu chạm điểm hoà vốn với 3.5 triệu lượt xem. Ác Quỷ Đối Đầu
+                    giữ vững vị trí top 1 doanh thu 2 tuần liên tiếp tại quê nhà
+                    Hàn Quốc
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon">
+                      <a
+                        href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-4">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-1-big1.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt
+                      Christopher Nolan
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Làng phim đương đại những năm qua chứng kiến sự lên ngôi của
+                    cái tên Christopher Nolan, được biết tới như một trong những
+                    đạo diễn thiên tài với khả năng tạo ra siêu phẩm bạc tỉ chất
+                    lượng.
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon">
+                      <a
+                        href="/goc-dien-anh/7953-antebellum-4-ly-do-khong-the-bo-lo-sieu-pham-kinh-di-antebellum-bay-thuc-tai-kinh-hoang?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-4">
+                  <div class="newsThumbnail">
+                    <img src="./img/newsblock/tab-1-big2.png" alt="" />
+                  </div>
+                  <a href="#">
+                    <p class="newsTitle">
+                      Truy Cùng Giết Tận - Cuộc tái ngộ của hai 'ông hoàng phòng
+                      vé' xứ Hàn
+                    </p>
+                  </a>
+                  <p class="newsDescription">
+                    Sau 7 năm kể từ New World – bộ phim đạt thành tích hơn 4.68
+                    triệu vé, hai tên tuổi lão làng trong làng điện ảnh Hàn Quốc
+                    mới tiếp tục tái hợp trong Truy Cùng Giết Tận – một bộ phim
+                    hành động siêu “nặng đô”.
+                  </p>
+                  <div class="newsVoting">
+                    <div class="wrapIcon like">
+                      <img src="./img/like.png" alt="" />
+                      <span>0</span>
+                    </div>
+                    <div class="wrapIcon comment">
+                      <a
+                        href="/goc-dien-anh/7952-ac-quy-doi-dau-soan-ngoi-peninsula-tro-thanh-phim-dung-dau-doanh-thu-tai-han-quoc-mua-dich?tab=comment"
+                      >
+                        <img src="./img/comment.png" alt="" />
+                        <span>1</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="newsItems col-12 col-sm-12 col-md-4">
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub1.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        6 đạo diễn tỉ đô làm nên thành công của những bom tấn
+                        đình đám nhất Hollywood
+                      </p>
+                    </a>
+                  </div>
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub2.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        Gái Già Lắm Chiêu V – Những cuộc đời vương giả
+                      </p>
+                    </a>
+                  </div>
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub3.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già
+                        Lắm Chiêu
+                      </p>
+                    </a>
+                  </div>
+                  <div class="subItems col-xs-12">
+                    <div class="newsThumbnail">
+                      <img src="./img/newsblock/tab-1-sub4.png" alt="" />
+                    </div>
+                    <a href="#">
+                      <p class="newsTitle">
+                        5 lý do khiến bạn không thể bỏ qua bộ phim Cậu Bé Người
+                        Gỗ Pinocchio
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wrapButtonSeeMoreNews text-center">
+                <button
+                  class="btnViewMore"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#tab3-collapse"
+                  aria-expanded="false"
+                  aria-controls="tab3-collapse"
+                >
+                  XEM THÊM
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="appblock">
+      <div class="container maxWidth">
+        <div class="row mr-auto ml-auto col-12 pl-0 pr-0">
+          <div
+            class="col-md-12 col-lg-6 appLeft text-white text-center text-lg-left"
+          >
+            <p class="largeText">Ứng dụng tiện lợi dành cho</p>
+            <p class="largeText">người yêu điện ảnh</p>
+            <br />
+            <p class="smallText">
+              Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp và
+              đổi quà hấp dẫn.
+            </p>
+            <br />
+            <button
+              class="appButton"
+              onclick="window.open('https://itunes.apple.com/us/app/123phim-mua-ve-lien-tay-chon/id615186197?mt=8','_blank')"
+            >
+              App miễn phí - Tải về ngay!
+            </button>
+            <p class="textUnderApp">
+              TIX có hai phiên bản
+              <a
+                class="text-white"
+                target="_blank"
+                href="https://itunes.apple.com/us/app/123phim-mua-ve-lien-tay-chon/id615186197?mt=8"
+                >iOS</a
+              >
+              &amp;&nbsp;<a
+                class="text-white"
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=vn.com.vng.phim123"
+                >Android</a
+              >
+            </p>
+          </div>
+          <div class="col-md-12 col-lg-6 text-white appRight">
+            <img class="phone-img" src="./img/mobile.png" alt="Loading..." />
+            <div id="sliderScreen">
+              <div class="wraperSlick app-slider">
+                <div class="appSlider">
+                  <img src="./img/icons/slide1.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide2.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide3.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide4.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide5.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide6.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide7.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide8.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide9.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide10.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide11.jpg" alt="" />
+                </div>
+                <div class="appSlider">
+                  <img src="./img/icons/slide12.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container maxWidth">
+        <div class="row mr-auto ml-auto col-12 pl-0 pr-0">
+          <div class="col-4 col-md-5 col-lg-4">
+            <p class="title text-white hideOnMobile">TIX</p>
+            <div class="row mr-0 ml-0">
+              <div class="col-lg-6 pl-0 topLeft-1 hideOnMobile">
+                <a ui-sref="main.faq" href="/faq">FAQ</a>
+                <a ui-sref="guildline.guidev2" href="/brand-guideline/"
+                  >Brand Guidelines</a
+                >
+              </div>
+              <div class="col-lg-6 pl-0 topLeft-2 hideOnMobile text-lg-left">
+                <a href="/thoa-thuan-su-dung">Thỏa thuận sử dụng </a>
+                <a href="/chinh-sach-bao-mat"> Chính sách bảo mật </a>
+              </div>
+
+              <div class="showOnMobile">
+                <a href="/webview/faq.html">FAQ</a>
+                <a href="/webview/regular.html">Thỏa thuận sử dụng</a>
+                <a href="/webview/policy.html">Chính sách bảo mật</a>
+                <a href="/brand-guideline/">Brand Guidelines</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-white hideOnMobile">
+            <p class="title">ĐỐI TÁC</p>
+            <div class="row col-sm-12 col-xs-12 linePartner">
+              <a target="_blank" href="https://www.cgv.vn/" title="CGV">
+                <img class="iconConnect bg-light" src="./img/icons/cgv.png" />
+              </a>
+              <a target="_blank" href="http://bhdstar.vn" title="BHD">
+                <img class="iconConnect" src="./img/icons/bhd.png" />
+              </a>
+              <a target="_blank" href="http://galaxycine.vn" title="Galaxy">
+                <img class="iconConnect" src="./img/icons/galaxycine.png" />
+              </a>
+              <a target="_blank" href="http://cinestar.com.vn" title="Cinestar">
+                <img class="iconConnect" src="./img/icons/cinestar.png" />
+              </a>
+              <a
+                target="_blank"
+                href="http://lottecinemavn.com"
+                title="Lotte Cinema"
+              >
+                <img class="iconConnect" src="./img/icons/lotte.png" />
+              </a>
+            </div>
+            <div class="row col-sm-12 col-xs-12 linePartner">
+              <a
+                target="_blank"
+                href="https://www.megagscinemas.vn"
+                title="MegaGS"
+              >
+                <img class="iconConnect" src="./img/icons/megags.png" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.betacineplex.vn/"
+                title="Beta"
+              >
+                <img class="iconConnect" src="./img/icons/bt.jpg" />
+              </a>
+              <a target="_blank" href="http://ddcinema.vn" title="DDC">
+                <img class="iconConnect bg-light" src="./img/icons/ddc.png" />
+              </a>
+              <a
+                target="_blank"
+                href="https://touchcinema.com/"
+                title="Touch Cinema"
+              >
+                <img class="iconConnect" src="./img/icons/TOUCH.png" />
+              </a>
+              <a target="_blank" href="https://cinemaxvn.com/" title="Cinemax">
+                <img class="iconConnect" src="./img/icons/cnx.jpg" />
+              </a>
+            </div>
+            <div class="row col-sm-12 col-xs-12 linePartner">
+              <a target="_blank" href="http://starlight.vn/" title="Starlight">
+                <img class="iconConnect" src="./img/icons/STARLIGHT.png" />
+              </a>
+              <a target="_blank" href="https://www.dcine.vn/" title="Dcine">
+                <img class="iconConnect" src="./img/icons/dcine.png" />
+              </a>
+              <a target="_blank" href="https://zalopay.vn/" title="ZaloPay">
+                <img class="iconConnect" src="./img/icons/zalopay_icon.png" />
+              </a>
+              <a target="_blank" href="https://www.payoo.vn/" title="Payoo">
+                <img class="iconConnect" src="./img/icons/payoo.jpg" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.vietcombank.com.vn/"
+                title="Vietcombank"
+              >
+                <img class="iconConnect" src="./img/icons/VCB.png" />
+              </a>
+            </div>
+            <div class="row col-sm-12 col-xs-12 linePartner">
+              <a
+                target="_blank"
+                href="http://www.agribank.com.vn/"
+                title="Agribank"
+              >
+                <img class="iconConnect" src="./img/icons/AGRIBANK.png" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.vietinbank.vn/"
+                title="Vietinbank"
+              >
+                <img class="iconConnect" src="./img/icons/VIETTINBANK.png" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.indovinabank.com.vn/"
+                title="IVB"
+              >
+                <img class="iconConnect" src="./img/icons/IVB.png" />
+              </a>
+              <a target="_blank" href="http://123go.vn" title="123Go">
+                <img class="iconConnect" src="./img/icons/123go.png" />
+              </a>
+              <a target="_blank" href="http://laban.vn" title="La Bàn">
+                <img class="iconConnect" src="./img/icons/laban.png" />
+              </a>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 text-white d-flex">
+            <div class="col-lg-6 topRight-1 hideOnMobile text-center">
+              <p class="title">MOBILE APP</p>
+              <a
+                target="_blank"
+                href="https://apps.apple.com/vn/app/tix-%C4%91%E1%BA%B7t-v%C3%A9-nhanh-nh%E1%BA%A5t/id615186197"
+                title="Apple App"
+              >
+                <img class="iconApp" src="./img/icons/apple-logo.png" />
+              </a>
+              <a
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=vn.com.vng.phim123"
+                title="Android App"
+              >
+                <img class="iconApp" src="./img/icons/android-logo.png" />
+              </a>
+            </div>
+            <div
+              class="col-12 col-lg-6 text-left topRight-2 pl-0 text-lg-center"
+            >
+              <p class="title hideOnMobile">SOCIAL</p>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/tix.vn/"
+                title="Facebook social"
+              >
+                <img class="iconApp" src="./img/icons/facebook-logo.png" />
+              </a>
+              <a
+                target="_blank"
+                href="https://zalo.me/tixdatve"
+                title="Zalo social"
+              >
+                <img class="iconApp" src="./img/icons/zalo-logo.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="hrFooter" />
+        <div class="row mr-auto ml-auto text-center">
+          <div class="col-md-1 pl-0 col-12 imgFooter">
+            <img
+              class="vngIcon"
+              src="./img/icons/zion-logo.jpg"
+              style="border-radius: 8px"
+            />
+          </div>
+          <div class="col-md-9 col-12 text-center infoFooter">
+            <p class="text-white">TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</p>
+            <p>
+              Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ
+              Chí Minh, Việt Nam.
+            </p>
+            <p>
+              Giấy chứng nhận đăng ký kinh doanh số: 0101659783,<br />đăng ký
+              thay đổi lần&nbsp;thứ&nbsp;30,
+              ngày&nbsp;22&nbsp;tháng&nbsp;01&nbsp;năm&nbsp;2020 do
+              Sở&nbsp;kế&nbsp;hoạch&nbsp;và&nbsp;đầu&nbsp;tư Thành phố Hồ Chí
+              Minh cấp.
+            </p>
+            <p>
+              Số Điện Thoại (Hotline): 1900&nbsp;545&nbsp;436<br />Email:
+              <a href="mailto:support@tix.vn">support@tix.vn</a>
+            </p>
+          </div>
+          <div
+            class="col-md-2 col-12 pl-0 pr-0 imgFooter text-md-center text-lg-right"
+          >
+            <a target="_blank" href="http://online.gov.vn/Home/WebDetails/62782"
+              ><img
+                class="imgBoCo"
+                alt="Bộ Công Thương"
+                title=""
+                src="./img/icons/bct.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="moveTop" class="backToTop cd-top text-replace js-cd-top"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script> -->
+    <script src="./js/slick.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".wraperTrailer").slick({
+          infinite: true,
+          speed: 300,
+          slidesToScroll: 1,
+          slidesToShow: 1,
+          arrows: true,
+          dots: true,
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".app-slider").slick({
+          infinite: true,
+          speed: 300,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".tabFilmSlider1").slick({
+          mobileFirst: true,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          arrows: true,
+          rows: 2,
+        });
+        $(".tabFilmSlider2").slick({
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          arrows: true,
+          rows: 2,
+        });
+      });
+    </script>
+    <script>
+      $(".sideBar-toggler").click(function () {
+        $("#mySidebar").toggleClass("active");
+      });
+      $(".xSidebar").click(function () {
+        $("#mySidebar").toggleClass("active");
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"
+      integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

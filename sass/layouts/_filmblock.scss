@@ -1,0 +1,134 @@
+#filmContent{
+  height: 899px;
+  .tabFilmSlider1,.tabFilmSlider2{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    .slick-prev.slick-arrow{
+      left: -60px;
+      z-index: 20;
+    }
+    .slick-next.slick-arrow{
+      right: -60px;
+      z-index: 20;
+    }
+  }
+}
+#filmblock{
+  .maxWidth{
+    padding-top: 75px;
+  }
+}
+#filmblockSub{
+  height: 0px;
+  overflow-y: hidden;
+}
+.filmNav{
+  margin-bottom: 30px;
+  border: none !important;
+  justify-content: center;
+  .filmLink{
+    @include styleText($color-black-1,$fs-5 + 2,$fw-normal);
+    border: none;
+    background-color: $color-trans;
+    line-height: 24px;
+    transition: all .2s;
+    height: auto;
+    &.active{
+      @include styleText($color-red-0,$fs-6,$fw-normal);
+      background-color: $color-trans;
+    }
+    &:hover{
+      font-size: $color-red-0;
+    }
+  }
+}
+.film-collapse{
+  height: 0px;
+  margin: auto;
+}
+.film-collapse.show{
+  height: min-content;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#upComingFilmSub{
+  display: flex;
+  .filmItem{
+    width: 50%;
+  }
+  .film-collapse{
+    width: 100%;
+    display: flex;
+    overflow-y: hidden;
+  }
+  .wrapButtonSeeMoreNews{
+    width: 100%;
+  }
+}
+
+.filmThumbnail.set-1{
+  background: url(./../img/film01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filmThumbnail.set-2{
+  background: url(./../img/film02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filmThumbnail.set-3{
+  background: url(./../img/film03.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filmThumbnail.set-4{
+  background: url(./../img/film04.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filmThumbnail.set-5{
+  background: url(./../img/carou01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filmThumbnail.set-6{
+  background: url(./../img/carou02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filmThumbnail.set-7{
+  background: url(./../img/carou03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filmThumbnail.set-8{
+  background: url(./../img/carou04.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filmThumbnail.set-9{
+  background: url(./../img/carou05.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1070px){
+  .slick-arrow{
+    display: none !important;
+  }
+}
+@include responsive('medium'){
+  #filmblock{
+    height: 0px;
+    overflow-y: hidden;
+  }
+  #filmblockSub{
+    height: auto !important;
+    overflow-y: visible !important;
+    #filmContentSub{
+      min-height: 935px;
+    }
+  }
+}

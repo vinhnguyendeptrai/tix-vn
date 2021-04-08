@@ -1,0 +1,186 @@
+.nameFilm{
+  @include styleText($color-black-1, $fs-4, $fw-bold-0);
+  max-height: 42px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.timeFilm{
+  @include styleText($color-gray-5, $fs-2, $fw-normal);
+}
+
+.newsTitle{
+  @include styleText($color-black-1,$fs-4,$fw-bold-0);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  height: 42px;
+  transition: color .2s;
+  margin-bottom: $mg-1;
+  &:hover{
+    @include styleText($color-red-0,$fs-4,$fw-bold-0);
+  }
+}
+.newsDescription{
+  @include styleText($color-gray-5,$fs-2,$fw-normal);
+  text-align: justify;
+  padding: 0 $pd-0 0 0;
+  line-height: 19px;
+  letter-spacing: .17;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 55px;
+  margin-bottom: $mg-3;
+}
+.wrapIcon{
+  span{
+    @include styleText($color-gray-1,$fs-1,$fw-normal);
+    line-height: 1;
+  }
+}
+.largeText{
+  @include styleText($color-white-0,30px,$fw-bold-1);
+  margin: 0 0 $mg-2;
+}
+.smallText{
+  @include styleText($color-white-0,$fs-4,$fw-normal);
+  margin: 0 0 $mg-2;
+}
+.textUnderApp{
+  padding-top: $pd-1;
+  @include styleText($color-white-0,$fs-0,$fw-normal);
+  a{
+    border-bottom: 1px solid $color-white-0;
+  }
+}
+
+.topLeft-1,.topLeft-2{
+  a{
+    @include styleText($color-gray-4,$fs-1,$fw-bold-1);
+    display: block;
+    white-space: nowrap;
+    transition: all .2s;
+    line-height: 2.3;
+    &:hover{
+      @include styleText($color-white-0,$fs-1,$fw-bold-1);
+    }
+  }
+}
+.topRight-1,.topRight-2{
+  @include styleText($color-gray-4,$fs-1,$fw-normal);
+  a{
+    display: inline;
+  }
+}
+.title{
+  @include styleText($color-white-0,$fs-1 - 1,$fw-normal);
+}
+.infoFooter{
+  p{
+    margin: 0;
+    @include styleText($color-gray-4,$fs-1,$fw-normal);
+    line-height: 1.8;
+    a{
+      @include styleText($color-red-0,$fs-1,$fw-normal);
+    }
+  }
+}
+
+.menuTitle{
+  @include styleText($color-black-1,$fs-0,$fw-normal);
+  transition: all .2s;
+  margin-right: $mg-4;
+  display: inline-block;
+  &:hover{
+    @include styleText($color-red-0,$fs-0,$fw-normal);
+  }
+}
+.loginTitle{
+  @include styleText($color-gray-4,$fs-2,$fw-normal);
+  height: 100%;
+  &:hover{
+    @include styleText($color-gray-4,$fs-2,$fw-normal);
+  }
+  span{
+    display: block;
+    margin-right: $mg-2;
+  }
+}
+.locationMenu{
+  @include styleText($color-gray-3,$fs-2,$fw-normal);
+}
+
+
+
+.cinemaName{
+  @include styleText($color-black-0,$fs-0,$fw-bold-0);
+  margin: 0;
+}
+.colorBHD{
+  @include styleText($color-cine-1,$fs-0,$fw-bold-0);
+}
+.colorGalaxy{
+  @include styleText($color-cine-2,$fs-0,$fw-bold-0);
+}
+.colorStar{
+  @include styleText($color-cine-3,$fs-0,$fw-bold-0);
+}
+.colorDDC{
+  @include styleText($color-cine-4,$fs-0,$fw-bold-0);
+}
+.colorMegaGS{
+  @include styleText($color-cine-5,$fs-0,$fw-bold-0);
+}
+.colorLotte{
+  @include styleText($color-cine-7,$fs-0,$fw-bold-0);
+}
+.addressCine{
+  @include styleText($color-gray-4,$fs-1,$fw-normal);
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.redDetail{
+  @include styleText($color-red-0,$fs-1,$fw-normal);
+  &:hover{
+    @include styleText($color-red-0,$fs-1,$fw-normal);
+  }
+}
+
+.movieTitle{
+  @include styleText($color-black-1,$fs-0,$fw-bold-0);
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  p{
+    margin: 0;
+  }
+  p:nth-child(2){
+    @include styleText($color-gray-3,$fs-1,$fw-normal);
+  }
+}
+.movieSessions{
+  p{
+    @include styleText($color-black-1,$fs-4,$fw-bold-0);
+    margin-bottom: $mg-1;
+  }
+}
+.movie-Startime{
+  span{
+    @include styleText($color-start-time,$fs-5,$fw-bold-0)
+  }
+  &:hover{
+    span{
+      @include styleText($color-red-0,$fs-5,$fw-bold-0)
+    }
+  }
+}

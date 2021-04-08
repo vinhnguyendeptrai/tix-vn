@@ -1,0 +1,84 @@
+.carousel{
+  margin-top: 60px;
+  .carouselItem{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat !important;
+    height: 580px;
+    position: relative;
+    &:hover{
+      .playTrailer{
+        opacity: 1;
+      }
+    }
+    .playTrailer{
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .bg-one{
+    background: url(../img/carou01.png);
+  }
+  .bg-two{
+    background: url(../img/carou02.png);
+  }
+  .bg-three{
+    background: url(../img/carou03.jpg);
+  }
+  .bg-four{
+    background: url(../img/carou04.jpg);
+  }
+  .bg-five{
+    background: url(../img/carou05.jpg);
+  }
+  .wraperTrailer{
+    width: 100%;
+    .slick-dots{
+      position: absolute;
+      bottom: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-left: 0;
+      li{
+        display: inline-block;
+        margin: 0;
+        &.slick-active{
+          button{
+            background-color: $color-red-0;
+          }
+        }
+        button{
+          background-color: $color-gray-2;
+          width: 12px;
+          height: 12px;
+          padding: 0;
+          border-radius: 50%;
+          border: none;
+          color: $color-trans;
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+          &::before{
+            content: none;
+          }
+        }
+      }
+    }
+  }
+  #homeTools{
+    max-width: 940px;
+    height: 80px;
+  }
+}
+@include responsive('large'){
+  #homeTools{
+    display: none;
+  }
+}
+@media screen and (max-width: 768px){
+  .carousel{
+    height: 0px;
+    overflow-y: hidden;
+  }
+}

@@ -1,0 +1,23 @@
+header{
+  nav{
+    height: 60px;
+  }
+}
+
+@include responsive ('medium'){
+  header{
+    .midMenu{
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 736px){
+  header {
+    .rightMenu{
+      display: none !important;
+    }
+    .sideBar-toggler{
+      display: block !important;
+    }
+  }
+}

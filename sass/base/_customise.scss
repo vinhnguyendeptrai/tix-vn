@@ -1,0 +1,195 @@
+
+.selectMenu{
+  @include styleText($color-black-1,$fs-0,$fw-normal);
+  background-color: $color-trans;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 7%;
+  background-image: url(../img/icons/dropdown-icon.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: $pd-3;
+  &::after{
+    color: $color-trans;
+  }
+}
+.dropdown-menu{
+  a{
+    @include styleText($color-black-0,$fs-0,$fw-normal);
+    padding: $pd-0 - 2  $pd-3;
+    white-space: nowrap;
+    transition: all .2s;
+    &:hover{
+      background-color: #60c5ef;
+      @include styleText($color-white-0,$fs-0,$fw-normal);
+    }
+  }
+}
+
+.customBar{
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 2px 2px 2px $color-gray-7
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-gray-4;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track-piece{
+    background-color:$color-gray-7;
+  }
+}
+
+.maxWidth{
+  max-width: 940px;
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  top: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.8);
+  z-index: 10;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: all .4s;
+  &.active{
+    width: 100% ;
+  }
+  .wrapperMenu{
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: #fff;
+    overflow-y: hidden;
+    .wrapFirst{
+      a{
+        padding: 10px;
+        display: inline-block;
+        width: 93%;
+        transition: all .3s;
+        @include styleText($color-black-1,$fs-0,$fw-normal);
+        &:hover{
+          @include styleText($color-red-0,$fs-0,$fw-normal);
+        }
+      }
+      .btnLogin{
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .xSidebar{
+        width: 15px;
+        height: 15px;
+        opacity: 1;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .menuSideBar{
+      display: block;
+      padding: 20px;
+      position: relative;
+      width: calc(100% - 40px);
+      font-size: 18px;
+      color: #000;
+    }
+  }
+}
+// Slick Arrow
+.slick-prev{
+  background: url(./../img/icons/back-session.png);
+  left: 10px;
+  z-index: 10;
+}
+.slick-next{
+  background: url(./../img/icons/next-session.png);
+  right: 10px;
+  z-index: 10;
+}
+.slick-prev:hover,.slick-prev:focus,.slick-next:hover,.slick-next:focus {
+  background-color: transparent;
+}
+.slick-arrow{
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 100px;
+  opacity: .8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.slick-prev::before, .slick-next::before {
+  content: none;
+}
+
+// Tab-pane
+.tab-pane.fade{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: block;
+  height: 0;
+  margin: auto;
+  .wrapButtonSeeMoreNews{
+    display: none;
+  }
+}
+.tab-pane.fade.show{
+  height: auto;
+  .wrapButtonSeeMoreNews{
+    display: block;
+  }
+}
+
+
+/* Back to top */
+.backToTop{
+  display: none;
+  position: fixed;
+  right: 5px;
+  bottom: 10px;
+  width: 24px;
+  height: 24px;
+  z-index: 2;
+  right: 5px;
+  opacity: 0;
+  visibility: hidden;
+  background-size: cover;
+  background-image: url(./../img/icons/black-arrow-pointing-up.png);
+}
+.cd-top--is-visible {  
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top--fade-out {  
+  opacity: 1;
+}
+
+
+@include responsive ('large'){
+  .hideOnMobile{
+    display: none !important;
+  }
+  #moveTop{
+    display: block;
+  }
+}

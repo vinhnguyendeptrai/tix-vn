@@ -1,0 +1,172 @@
+.filmItem {
+  padding: $pd-3 $pd-1 0;
+  margin-bottom: $mg-5;
+  &:hover .showHover {
+    opacity: 1;
+  }
+  &:hover .hideHover {
+    opacity: 0;
+  }
+  .filmThumbnail {
+    border-radius: $border-radius;
+    height: 318px;
+    position: relative;
+    .showingDetail {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: 0 0;
+      background: linear-gradient(to top, #000, transparent 100%);
+      top: 0;
+      border-radius: $border-radius;
+      .playTrailer {
+        width: 48px;
+        height: 48px;
+        opacity: 1;
+      }
+    }
+    .avgPoint {
+      .textPoint {
+        transform: scaleY(1.2);
+        font-weight: $fw-bold-1;
+      }
+      .setStar {
+        display: flex;
+        justify-content: center;
+        padding: $pd-0 0;
+        img {
+          display: inline-block;
+          max-width: 8px;
+        }
+      }
+    }
+  }
+  .filmInfo {
+    margin-top: $mg-2;
+    position: relative;
+    .ageRed {
+      font-size: $fs-0;
+    }
+    .redBuyButton {
+      width: 100%;
+    }
+    .timeFilm {
+      margin-top: $mg-2 - 2;
+    }
+  }
+}
+.showHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.2s;
+  width: 100%;
+}
+.scheduleDetail{
+  padding: $pd-3 $pd-2 $pd-2 + 2 $pd-3;
+  .movieInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+    .movieTitle{
+      width: calc(100% - 60px);
+      .ageRed{
+        margin-right: $mg-1;
+      }
+      .ageGreen{
+        margin-right: $mg-1;
+      }
+    }
+  }
+  .movieSessions{
+    padding-top: 15px;
+    .movie-Startime{
+      width: calc( 25% - 10px );
+      margin: 0 $mg-2 $mg-2 0;
+    }
+  }
+}
+// 
+.cineAddItem{
+  padding: $pd-2;
+  padding-left: $pd-3;
+  width: 100%;
+  opacity: .5;
+  cursor: pointer;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  &:first-child{
+    padding-top: 20px;
+  }
+  &:hover,&.active{
+    opacity: 1;
+  }
+  img{
+    width: 50px;
+  }
+  .wrapInfo{
+    width: calc( 100% - 60px );
+  }
+}
+.newsItems{
+  margin-bottom: $mg-4;
+  padding: 0 7.5px;
+  .newsThumbnail{
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: $border-radius;
+    margin-bottom: $mg-2;
+    img{
+      width: 100%;
+    }
+  }
+  .newsVoting{
+    display: flex;
+    .wrapIcon{
+      display: inline-table;
+      margin-right: $mg-5;
+      cursor: pointer;
+      &:hover img{
+        transform: scale(1.1,1.1);
+      }
+      img{
+        display: inline-block;
+        margin-right: $mg-2;
+        width: 18px;
+        transition: all .2s;
+      }
+    }
+  }
+}
+.subItems{
+  display: flex;
+  .newsThumbnail{
+    margin-bottom: $mg-2;
+    margin-right: $mg-2;
+    img{
+      width: 50px;
+      height: 50px;
+      border-radius: $border-radius;
+    }
+  }
+  a{
+    width: calc(100% - 70px);
+    height: max-content;
+  }
+  .newsTitle{
+    @include styleText($color-black-1,$fs-4,$fw-normal);
+    opacity: .7;
+    &:hover{
+      @include styleText($color-red-0,$fs-4,$fw-normal);
+    }
+  }
+}

@@ -1,0 +1,84 @@
+footer{
+  background-color: #222;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .linePartner{
+    margin-bottom: 15px;
+    .iconConnect{
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      margin-right: 15px;
+      &:hover{
+        opacity: .7;
+      }
+    }
+  }
+  .topRight-1,.topRight-2{
+    width: 50%;
+    img.iconApp{
+      background: 0 0;
+      height: 30px;
+      width: auto;
+      margin: 5px;
+    }
+  }
+  .hrFooter{
+    border-top: 1px solid $color-gray-5;
+  }
+  .vngIcon{
+    width: 80px;
+    display: block;
+  }
+  .imgBoCo{
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .topLeft-2{
+    display: flex;
+    padding: 0;
+    a{
+      margin: $mg-1;
+    }
+  }
+  .vngIcon{
+    display: block;
+    margin: auto;
+    margin-bottom: $mg-4;
+  }
+}
+@media screen and (max-width: 869px){
+  .topLeft-2{
+    display: block;
+    a{
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .topLeft-2{
+    display: flex;
+    justify-content: center;
+  }
+  .topRight-2{
+    display: flex;
+    justify-content: center;
+  }
+}
+.showOnMobile{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  a{
+    margin: 5px;
+    display: inline;
+    @include styleText($color-gray-4,$fs-1,$fw-normal);
+  }
+}
+@media screen and (min-width:993px){
+  .showOnMobile{
+    display: none;
+  }
+}

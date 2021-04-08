@@ -1,0 +1,28 @@
+//helper
+@import'./helper/variables';
+@import './helper/mixin';
+
+// vendor
+
+// base
+@import './base/reset';
+@import './base/customise';
+@import './base/typography';
+
+
+//component
+@import './components/button';
+@import './components/cardItem';
+@import './components/navbar';
+
+//layout
+@import './layouts/header';
+@import './layouts/carousel';
+@import './layouts/filmblock';
+@import './layouts/cinemablock';
+@import './layouts/newsblock';
+@import './layouts/appblock';
+@import './layouts/footer';
+
+// page
+// theme
